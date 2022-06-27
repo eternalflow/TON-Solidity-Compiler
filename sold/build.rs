@@ -38,7 +38,7 @@ fn main() {
     println!("cargo:rustc-link-search=native={}/build/deps/lib", sol2tvm.display());
     println!("cargo:rustc-link-lib=static=jsoncpp");
     if !cfg!(any(windows)) {
-        println!("cargo:rustc-link-lib=static=boost_filesystem");
+        println!("cargo:rustc-link-lib=boost_filesystem");
     }
 
     if let Some(cpp_stdlib) = get_cpp_stdlib() {
